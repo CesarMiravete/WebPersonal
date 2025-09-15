@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://cesar-miravete.vercel.app",
+    url: "https://cesarmiravetezarzaga.vercel.app",
     siteName: "César Miravete Zarazaga - Portfolio",
     title: "César Miravete Zarazaga - Matemático & Analista de Datos",
     description:
@@ -63,12 +63,11 @@ export const metadata: Metadata = {
     images: ["/professional-mathematician-portrait.jpg"],
   },
   alternates: {
-    canonical: "https://cesar-miravete.vercel.app",
+    canonical: "https://cesarmiravetezarzaga.vercel.app",
   },
   verification: {
-    google: "your-google-verification-code", // Replace with actual verification code
-  },
-    generator: 'v0.app'
+    google: "37d6558518f07221",
+    generator: 'Cesar Miravete'
 }
 
 export default function RootLayout({
@@ -89,9 +88,9 @@ export default function RootLayout({
               jobTitle: "Matemático & Analista de Datos",
               description:
                 "Matemático especializado en análisis de datos, Python, R y MATLAB. Consultor junior con experiencia en modelado estadístico y machine learning.",
-              url: "https://cesar-miravete.vercel.app",
-              image: "https://cesar-miravete.vercel.app/professional-mathematician-portrait.jpg",
-              sameAs: ["https://linkedin.com/in/cesar-miravete", "https://github.com/cesar-miravete"],
+              url: "https://cesarmiravetezarzaga.vercel.app",
+              image: "https://cesarmiravetezarzaga.vercel.app/professional-mathematician-portrait.jpg",
+              sameAs: ["https://www.linkedin.com/in/césar-miravete-zarazaga-366195290", "https://github.com/CesarMiravete"],
               alumniOf: {
                 "@type": "EducationalOrganization",
                 name: "Universidad de Zaragoza",
