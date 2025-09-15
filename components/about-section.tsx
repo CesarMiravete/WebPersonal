@@ -26,16 +26,14 @@ export function AboutSection() {
             <div className="animate-slide-up space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Soy <strong>César Miravete Zarazaga</strong>, matemático graduado de la{" "}
-                <strong>Universidad de Zaragoza</strong> apasionado por la tecnología y el desarrollo de software que resuelve problemas reales. Mi formación en
-                matemáticas me ha proporcionado una base sólida para el <strong>análisis de datos</strong> y la
-                 <strong>modelización matemática</strong>, áreas en las que me especializo actualmente.
+                 <strong>Universidad de Zaragoza</strong> apasionado por la tecnología y el desarrollo de software que resuelve problemas reales. Mi formación en
+                matemáticas me ha proporcionado una base sólida para el <strong>análisis de datos</strong> y la <strong>modelización matemática</strong>, áreas en las que me especializo actualmente.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Como <strong>consultor junior</strong> y <strong>tutor privado de matemáticas</strong>, estoy motivado a
                 trabajar en empresas que fomenten la innovación y el trabajo en equipo. Me interesa especialmente el
-                desarrollo de
-                 <strong>aplicaciones industriales</strong>, el <strong>análisis de series temporales</strong> y la
+                desarrollo de <strong>aplicaciones industriales</strong>, el <strong>análisis de series temporales</strong> y la
                 implementación de soluciones tecnológicas creativas usando <strong>Python</strong>, <strong>R</strong> y{" "}
                  <strong>MATLAB</strong>.
               </p>
