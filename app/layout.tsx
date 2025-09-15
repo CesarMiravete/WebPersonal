@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     canonical: "https://cesarmiravetezarzaga.vercel.app",
   },
   verification: {
-    google: "37d6558518f07221",
+    google: "37d6558518f07221"},
     generator: 'Cesar Miravete'
 }
 
