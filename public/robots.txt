@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://cesar-miravete.vercel.app/sitemap.xml
+Sitemap: https://cesarmiravetezarzaga.vercel.app/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

@@ -9,29 +9,29 @@ const skillCategories = [
   {
     title: "Programación",
     skills: [
-      { name: "Python", level: 90 },
-      { name: "R", level: 85 },
-      { name: "MATLAB", level: 80 },
-      { name: "SQL", level: 75 },
+      { name: "Python"},
+      { name: "R"},
+      { name: "MATLAB"},
+      { name: "SQL"},
     ],
   },
   {
     title: "Matemáticas",
     skills: [
-      { name: "Estadística", level: 95 },
-      { name: "Modelización", level: 90 },
-      { name: "Análisis de Datos", level: 88 },
-      { name: "Series Temporales", level: 85 },
-      { name: "Muestreo No Paramétrico", level: 80 },
+      { name: "Estadística"},
+      { name: "Modelización"},
+      { name: "Análisis de Datos"},
+      { name: "Series Temporales"},
+      { name: "Muestreo No Paramétrico"},
     ],
   },
   {
     title: "Tecnologías",
     skills: [
-      { name: "PostgreSQL", level: 80 },
-      { name: "MQTT", level: 75 },
-      { name: "Airflow", level: 70 },
-      { name: "Git", level: 85 },
+      { name: "PostgreSQL"},
+      { name: "MQTT"},
+      { name: "Airflow"},
+      { name: "Git"},
     ],
   },
 ]

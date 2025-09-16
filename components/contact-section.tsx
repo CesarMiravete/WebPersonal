@@ -165,7 +165,7 @@ export function ContactSection() {
       <footer className="mt-20 pt-8 border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-muted-foreground">
-            <p>&copy; 2024 César Miravete Zarazaga. Todos los derechos reservados.</p>
+            <p>&copy; 2025 César Miravete Zarazaga. Todos los derechos reservados.</p>
             <p className="mt-2 text-sm">Construido con Next.js, Tailwind CSS, y desplegado en Vercel</p>
           </div>
         </div>

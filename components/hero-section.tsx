@@ -30,7 +30,7 @@ export function HeroSection() {
             </Button>
             <Button variant="outline" size="lg" className="group bg-transparent" asChild>
               <a
-                href="https://linkedin.com/in/cesar-miravete"
+                href="https://linkedin.com/in/CésarMiravete"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Perfil de LinkedIn de César Miravete"
