@@ -3,36 +3,25 @@
 import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Progress } from "@/components/ui/progress"
 
 const skillCategories = [
   {
     title: "Programación",
-    skills: [
-      { name: "Python", level: 90 },
-      { name: "R", level: 85 },
-      { name: "MATLAB", level: 80 },
-      { name: "SQL", level: 75 },
-    ],
+    skills: ["Python", "R", "MATLAB", "SQL"],
   },
   {
     title: "Matemáticas",
     skills: [
-      { name: "Estadística", level: 95 },
-      { name: "Modelización", level: 90 },
-      { name: "Análisis de Datos", level: 88 },
-      { name: "Series Temporales", level: 85 },
-      { name: "Muestreo No Paramétrico", level: 80 },
+      "Estadística",
+      "Modelización",
+      "Análisis de Datos",
+      "Series Temporales",
+      "Muestreo No Paramétrico",
     ],
   },
   {
     title: "Tecnologías",
-    skills: [
-      { name: "PostgreSQL", level: 80 },
-      { name: "MQTT", level: 75 },
-      { name: "Airflow", level: 70 },
-      { name: "Git", level: 85 },
-    ],
+    skills: ["PostgreSQL", "MQTT", "Airflow", "Git"],
   },
 ]
 
@@ -65,6 +54,7 @@ export function SkillsSection() {
             Mis <span className="text-primary">Habilidades</span>
           </h2>
 
+          {/* Botones de tabs */}
           <div className="flex justify-center mb-8">
             <div className="flex bg-background rounded-lg p-1">
               <button
@@ -75,7 +65,7 @@ export function SkillsSection() {
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                Vista de Progreso
+                Vista por Categorías
               </button>
               <button
                 onClick={() => setActiveTab("tags")}
@@ -90,21 +80,27 @@ export function SkillsSection() {
             </div>
           </div>
 
+          {/* Vista por categorías (sin barras ni porcentajes) */}
           {activeTab === "progress" ? (
             <div className="grid md:grid-cols-3 gap-8">
               {skillCategories.map((category, index) => (
-                <Card key={category.title} className="animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <Card
+                  key={category.title}
+                  className="animate-scale-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
                   <CardHeader>
-                    <CardTitle className="text-center text-primary">{category.title}</CardTitle>
+                    <CardTitle className="text-center text-primary">
+                      {category.title}
+                    </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className="space-y-2">
                     {category.skills.map((skill) => (
-                      <div key={skill.name} className="space-y-2">
-                        <div className="flex justify-between text-sm">
-                          <span className="font-medium">{skill.name}</span>
-                          <span className="text-muted-foreground">{skill.level}%</span>
-                        </div>
-                        <Progress value={skill.level} className="h-2" />
+                      <div
+                        key={skill}
+                        className="text-center text-sm font-medium py-1"
+                      >
+                        {skill}
                       </div>
                     ))}
                   </CardContent>
@@ -112,6 +108,7 @@ export function SkillsSection() {
               ))}
             </div>
           ) : (
+            /* Vista de etiquetas */
             <div className="animate-fade-in">
               <div className="flex flex-wrap gap-3 justify-center max-w-4xl mx-auto">
                 {technologies.map((tech, index) => (
