@@ -89,7 +89,7 @@ export function ProjectsSection() {
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  {/* <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                     <Button size="sm" variant="secondary" asChild>
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
@@ -102,7 +102,7 @@ export function ProjectsSection() {
                         Código
                       </a>
                     </Button>
-                  </div>
+                  </div> */}
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl text-primary">{project.title}</CardTitle>
@@ -122,7 +122,7 @@ export function ProjectsSection() {
           </div>
 
           {/* Other Projects */}
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-semibold text-center mb-8">Otros Proyectos</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {otherProjects.map((project, index) => (
@@ -173,7 +173,7 @@ export function ProjectsSection() {
                 </Card>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
