@@ -80,7 +80,7 @@ export function SkillsSection() {
             </div>
           </div>
 
-          {/* Vista por categorías (sin barras ni porcentajes) */}
+          {/* Vista por categorías con badges */}
           {activeTab === "progress" ? (
             <div className="grid md:grid-cols-3 gap-8">
               {skillCategories.map((category, index) => (
@@ -94,21 +94,25 @@ export function SkillsSection() {
                       {category.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2">
-                    {category.skills.map((skill) => (
-                      <div
-                        key={skill}
-                        className="text-center text-sm font-medium py-1"
-                      >
-                        {skill}
-                      </div>
-                    ))}
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      {category.skills.map((skill, idx) => (
+                        <Badge
+                          key={skill}
+                          variant="secondary"
+                          className="text-sm py-2 px-4 hover:bg-primary hover:text-primary-foreground transition-colors cursor-default animate-scale-in"
+                          style={{ animationDelay: `${idx * 0.05}s` }}
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
           ) : (
-            /* Vista de etiquetas */
+            /* Vista de etiquetas globales */
             <div className="animate-fade-in">
               <div className="flex flex-wrap gap-3 justify-center max-w-4xl mx-auto">
                 {technologies.map((tech, index) => (
