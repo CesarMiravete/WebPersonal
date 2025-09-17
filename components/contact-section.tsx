@@ -38,7 +38,8 @@ export function ContactSection() {
         alert("✅ Mensaje enviado con éxito")
         setFormData({ name: "", email: "", subject: "", message: "" })
       })
-      .catch(() => {
+      .catch((error) => { 
+        console.error("Error EmailJS:", error)
         alert("❌ Hubo un error al enviar el mensaje")
       })
       .finally(() => setLoading(false))
@@ -111,7 +112,7 @@ export function ContactSection() {
                     className="hover:bg-primary hover:text-primary-foreground transition-colors bg-transparent"
                     asChild
                   >
-                    <a href="https://linkedin.com/in/cesar-miravete" target="_blank" rel="noopener noreferrer">
+                    <a href="https://linkedin.com/in/CésarMiravete" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="h-5 w-5" />
                     </a>
                   </Button>
