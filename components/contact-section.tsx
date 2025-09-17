@@ -1,13 +1,13 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, Linkedin, Send } from "lucide-react"
+import emailjs from "@emailjs/browser"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -16,13 +16,32 @@ export function ContactSection() {
     subject: "",
     message: "",
   })
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" })
+    setLoading(true)
+
+    emailjs
+      .send(
+        "service_wsmduq8", // <- reemplaza con tu Service ID
+        "template_0k8get6", // <- reemplaza con tu Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "LtakNYcswhCJCd5l2" // <- reemplaza con tu Public Key
+      )
+      .then(() => {
+        alert("✅ Mensaje enviado con éxito")
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch(() => {
+        alert("❌ Hubo un error al enviar el mensaje")
+      })
+      .finally(() => setLoading(false))
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -41,7 +60,7 @@ export function ContactSection() {
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
+            {/* Contact Info (igual que antes) */}
             <div className="space-y-8">
               <div className="animate-slide-up">
                 <h3 className="text-2xl font-semibold mb-6">Conectemos</h3>
@@ -92,7 +111,7 @@ export function ContactSection() {
                     className="hover:bg-primary hover:text-primary-foreground transition-colors bg-transparent"
                     asChild
                   >
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://linkedin.com/in/cesar-miravete" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="h-5 w-5" />
                     </a>
                   </Button>
@@ -150,9 +169,9 @@ export function ContactSection() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full group">
+                  <Button type="submit" className="w-full group" disabled={loading}>
                     <Send className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    Enviar Mensaje
+                    {loading ? "Enviando..." : "Enviar Mensaje"}
                   </Button>
                 </form>
               </CardContent>
@@ -160,16 +179,6 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="mt-20 pt-8 border-t border-border">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-muted-foreground">
-            <p>&copy; 2025 César Miravete Zarazaga. Todos los derechos reservados.</p>
-            <p className="mt-2 text-sm">Construido con Next.js, Tailwind CSS, y desplegado en Vercel</p>
-          </div>
-        </div>
-      </footer>
     </section>
   )
 }
