@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Portfolio profesional de César Miravete Zarazaga, matemático especializado en análisis de datos y machine learning.",
     images: [
       {
-        url: "/professional-mathematician-portrait.jpg",
+        url: "https://cesarmiravetezarzaga.vercel.app/professional-mathematician-portrait.jpg",
         width: 1200,
         height: 630,
         alt: "César Miravete Zarazaga - Matemático y Analista de Datos",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "César Miravete Zarazaga - Matemático & Analista de Datos",
     description: "Portfolio profesional de César Miravete Zarazaga, matemático especializado en análisis de datos.",
-    images: ["/professional-mathematician-portrait.jpg"],
+    images: ["https://cesarmiravetezarzaga.vercel.app/professional-mathematician-portrait.jpg"],
   },
   alternates: {
     canonical: "https://cesarmiravetezarzaga.vercel.app",
