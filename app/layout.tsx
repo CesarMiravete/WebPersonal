@@ -90,7 +90,7 @@ export default function RootLayout({
                 "Matemático especializado en análisis de datos, Python, R y MATLAB. Consultor junior con experiencia en modelado estadístico y machine learning.",
               url: "https://cesarmiravetezarzaga.vercel.app",
               image: "https://cesarmiravetezarzaga.vercel.app/professional-mathematician-portrait.jpg",
-              sameAs: ["https://www.linkedin.com/in/césar-miravete-zarazaga-366195290", "https://github.com/CesarMiravete"],
+              sameAs: ["https://www.linkedin.com/in/CésarMiravete", "https://github.com/CesarMiravete"],
               alumniOf: {
                 "@type": "EducationalOrganization",
                 name: "Universidad de Zaragoza",

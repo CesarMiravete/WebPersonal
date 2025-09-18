@@ -122,8 +122,8 @@ export function ContactSection() {
 
             {/* Contact Form */}
             <Card className="animate-scale-in">
-              <CardHeader>
-                <CardTitle className="text-2xl text-primary">Enviar Mensaje</CardTitle>
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl text-primary"> Enviar Mensaje</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
